@@ -53,7 +53,6 @@ def minimize(X, f, args, maxnumlinesearch=None, maxnumfuneval=None, red=1.0, ver
     #speed up the minimization; it is probably not worth playing much with RHO.
 
     SMALL = 10.**-16                    #minimize.m uses matlab's realmin 
-    print("here")
     if maxnumlinesearch == None:
         if maxnumfuneval == None:
             raise Exception("Specify maxnumlinesearch or maxnumfuneval")

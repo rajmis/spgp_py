@@ -1,5 +1,14 @@
 from numpy import reshape,exp,tile,sum,log,diag,array,linalg,sqrt,trace,eye,pi,append
 
+
+"""
+This file constains the the utilites functions for learning the SPGP model and using the trained model for estimating the mean and variance.
+
+The spgp_lik is used for calculating the gradient for learning the hyper-parameters of the SPGP model. It assumes the hyper-params are provided as a single weight vector and this function unwraps it.
+
+spgp_pred is used for estimating the mean and variance given a test input.
+"""
+
 def spgp_lik(w,y,x,n):
 	DEL = 1e-6
 
